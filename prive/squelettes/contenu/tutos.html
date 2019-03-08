@@ -1,0 +1,8 @@
+#FORMULAIRE_RECHERCHE_ECRIRE{#SELF,ajax}
+<div class="nettoyeur"></div>
+
+<INCLURE{fond=prive/objets/liste/tutos, env, ajax, sinon=<:tuto:info_aucun_tuto:>}>
+
+[(#AUTORISER{creer,tuto})
+	[(#URL_ECRIRE{tuto_edit,new=oui}|icone_verticale{<:tuto:icone_creer_tuto:>,tuto,new,right})]
+]

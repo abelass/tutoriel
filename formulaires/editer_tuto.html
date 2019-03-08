@@ -1,0 +1,48 @@
+<div class='formulaire_spip formulaire_editer formulaire_#FORM formulaire_#FORM-#ENV{id_tuto,nouveau}'>
+	[<p class="reponse_formulaire reponse_formulaire_ok">(#ENV**{message_ok})</p>]
+	[<p class="reponse_formulaire reponse_formulaire_erreur">(#ENV*{message_erreur})</p>]
+
+	[(#ENV{editable})
+	<form method="post" action="#ENV{action}"><div>
+		#ACTION_FORMULAIRE{#ENV{action}}
+		<input type="hidden" name="id_tuto" value="#ENV{id_tuto}" />
+		<div class="editer-groupe">
+
+			[(#SAISIE{input, titre, obligatoire=oui,
+				label=<:tuto:champ_titre_label:>})]
+
+			[<div class="editer editer_rubrique[ (#ENV**{erreurs/id_parent}|oui)erreur]">
+					<label for="id_parent"><:titre_cadre_interieur_rubrique:></label>[
+					<span class="erreur_message">(#ENV**{erreurs/id_parent})</span>
+					]
+					(#VAL|chercher_rubrique{#ENV{id_tuto},#ENV{id_parent},'tuto',#ENV{id_secteur},'',0,form_simple})
+			</div>]
+
+
+
+			[(#SAISIE{textarea, descriptif, obligatoire=oui,
+				label=<:tuto:champ_descriptif_label:>})]
+
+			[(#SAISIE{selection, format,
+				label=<:tuto:champ_format_label:>})]
+
+			[(#SAISIE{input, niveau,
+				label=<:tuto:champ_niveau_label:>})]
+
+			[(#SAISIE{input, matiere,
+				label=<:tuto:champ_matiere_label:>})]
+
+			[(#SAISIE{textarea, resultat,
+				label=<:tuto:champ_resultat_label:>,
+				conteneur_class=pleine_largeur, class=inserer_barre_edition, rows=4})]
+
+			[(#SAISIE{selection, quantite_tissu,
+				label=<:tuto:champ_quantite_tissu_label:>})]
+
+		</div>
+		[(#REM) ajouter les saisies supplementaires : extra et autre, a cet endroit ]
+		<!--extra-->
+		<p class="boutons"><input type="submit" class="submit" value="<:bouton_enregistrer:>" /></p>
+	</div></form>
+	]
+</div>

@@ -1,0 +1,30 @@
+<BOUCLE_tuto(TUTOS){id_tuto=#ENV{id}}{statut?}>
+<div class="infos">
+[(#SET{texte_objet,<:tuto:titre_tuto:>})]
+<div class="numero"><:titre_cadre_numero_objet{objet=#GET{texte_objet}}:><p>#ID_TUTO</p></div>
+
+[(#FORMULAIRE_INSTITUER_OBJET{tutos,#ID_TUTO})]
+
+<div class='nb_elements'><!--nb_elements--></div>
+
+[(#REM)
+
+	Bouton voir en ligne
+
+]
+<BOUCLE_publie(TUTOS){id_tuto}>
+	[(#VAL{redirect}
+		|generer_url_action{type=tutos&id=#ID_TUTO}
+		|parametre_url{var_mode,calcul}
+		|icone_horizontale{<:icone_voir_en_ligne:>,racine})]
+</BOUCLE_publie>
+	[(#AUTORISER{previsualiser,tutos,#ID_TUTO,'',#ARRAY{statut,#STATUT}})
+		[(#VAL{redirect}
+			|generer_url_action{type=tutos&id=#ID_TUTO}
+			|parametre_url{var_mode,preview}
+			|icone_horizontale{<:previsualiser:>,preview})]
+	]
+<//B_publie>
+
+</div>
+</BOUCLE_tuto>
