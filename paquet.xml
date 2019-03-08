@@ -40,7 +40,7 @@
 		<onglet nom="tutoriel" titre="tutoriel:tutoriel_titre" parent="configuration" icone="images/tutoriel-24.png" />
 	-->
 
-	<necessite nom="saisies" compatibilite="[2.28.0;]" /> 
+	<necessite nom="saisies" compatibilite="[3.17.0;]" /> 
 
 
 	<pipeline nom="autoriser" inclure="tutoriel_autorisations.php" /> 
