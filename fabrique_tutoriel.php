@@ -2,7 +2,7 @@
 
 /**
  *  Fichier généré par la Fabrique de plugin v6
- *   le 2019-03-09 09:01:10
+ *   le 2019-03-09 09:15:32
  *
  *  Ce fichier de sauvegarde peut servir à recréer
  *  votre plugin avec le plugin «Fabrique» qui a servi à le créer.
@@ -129,21 +129,6 @@ $data = array (
           ),
           'recherche' => '8',
           'saisie' => 'textarea',
-          'explication' => '',
-          'saisie_options' => '',
-        ),
-        4 => 
-        array (
-          'nom' => 'Matière d’origine',
-          'champ' => 'matiere',
-          'sql' => 'varchar(255) NOT NULL DEFAULT \'\'',
-          'caracteristiques' => 
-          array (
-            0 => 'editable',
-            1 => 'versionne',
-          ),
-          'recherche' => '',
-          'saisie' => 'input',
           'explication' => '',
           'saisie_options' => '',
         ),

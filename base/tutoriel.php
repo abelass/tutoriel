@@ -51,7 +51,6 @@ function tutoriel_declarer_tables_objets_sql($tables) {
 			'id_secteur'         => 'bigint(21) NOT NULL DEFAULT 0',
 			'titre'              => 'varchar(255) NOT NULL DEFAULT ""',
 			'descriptif'         => 'text NOT NULL DEFAULT ""',
-			'matiere'            => 'varchar(255) NOT NULL DEFAULT ""',
 			'resultat'           => 'text NOT NULL DEFAULT ""',
 			'date'               => 'datetime NOT NULL DEFAULT "0000-00-00 00:00:00"',
 			'statut'             => 'varchar(20)  DEFAULT "0" NOT NULL',
@@ -70,8 +69,8 @@ function tutoriel_declarer_tables_objets_sql($tables) {
 		),
 		'titre' => 'titre AS titre, lang AS lang',
 		'date' => 'date',
-		'champs_editables'  => array('titre', 'descriptif', 'matiere', 'resultat', 'id_rubrique', 'id_secteur'),
-		'champs_versionnes' => array('titre', 'descriptif', 'matiere', 'resultat', 'id_rubrique', 'id_secteur'),
+		'champs_editables'  => array('titre', 'descriptif', 'resultat', 'id_rubrique', 'id_secteur'),
+		'champs_versionnes' => array('titre', 'descriptif', 'resultat', 'id_rubrique', 'id_secteur'),
 		'rechercher_champs' => array("titre" => 10, "descriptif" => 8, "resultat" => 8),
 		'tables_jointures'  => array(),
 		'statut_textes_instituer' => array(
