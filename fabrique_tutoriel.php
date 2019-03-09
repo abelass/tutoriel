@@ -2,7 +2,7 @@
 
 /**
  *  Fichier généré par la Fabrique de plugin v6
- *   le 2019-03-08 14:22:23
+ *   le 2019-03-09 09:01:10
  *
  *  Ce fichier de sauvegarde peut servir à recréer
  *  votre plugin avec le plugin «Fabrique» qui a servi à le créer.
@@ -132,36 +132,6 @@ $data = array (
           'explication' => '',
           'saisie_options' => '',
         ),
-        2 => 
-        array (
-          'nom' => 'Format',
-          'champ' => 'format',
-          'sql' => 'varchar(20) NOT NULL DEFAULT \'\'',
-          'caracteristiques' => 
-          array (
-            0 => 'editable',
-            1 => 'versionne',
-          ),
-          'recherche' => '',
-          'saisie' => 'selection',
-          'explication' => '',
-          'saisie_options' => '',
-        ),
-        3 => 
-        array (
-          'nom' => 'Niveau de difficulté',
-          'champ' => 'niveau',
-          'sql' => 'int(2) NOT NULL DEFAULT 0',
-          'caracteristiques' => 
-          array (
-            0 => 'editable',
-            1 => 'versionne',
-          ),
-          'recherche' => '',
-          'saisie' => 'input',
-          'explication' => '',
-          'saisie_options' => '',
-        ),
         4 => 
         array (
           'nom' => 'Matière d’origine',
@@ -191,21 +161,6 @@ $data = array (
           'saisie' => 'textarea',
           'explication' => '',
           'saisie_options' => 'conteneur_class=pleine_largeur, class=inserer_barre_edition, rows=4',
-        ),
-        6 => 
-        array (
-          'nom' => 'Quantité de tissu necessaire',
-          'champ' => 'quantite_tissu',
-          'sql' => 'varchar(25) NOT NULL DEFAULT \'\'',
-          'caracteristiques' => 
-          array (
-            0 => 'editable',
-            1 => 'versionne',
-          ),
-          'recherche' => '',
-          'saisie' => 'selection',
-          'explication' => '',
-          'saisie_options' => '',
         ),
       ),
       'champ_titre' => 'titre',

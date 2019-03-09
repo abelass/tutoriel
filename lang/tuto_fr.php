@@ -13,10 +13,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// C
 	'champ_descriptif_label' => 'Descriptif',
-	'champ_format_label' => 'Format',
 	'champ_matiere_label' => 'Matière d’origine',
-	'champ_niveau_label' => 'Niveau de difficulté',
-	'champ_quantite_tissu_label' => 'Quantité de tissu necessaire',
 	'champ_resultat_label' => 'Objet/Résultat final',
 	'champ_titre_label' => 'Titre',
 	'confirmer_supprimer_tuto' => 'Confirmez-vous la suppression de cet tutoriel ?',
