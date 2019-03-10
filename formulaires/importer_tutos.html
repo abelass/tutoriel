@@ -1,0 +1,33 @@
+<div class="formulaire_spip formulaire_#ENV{form}">
+	[<p class="reponse_formulaire reponse_formulaire_ok">(#ENV*{message_ok})</p>]
+	[<p class="reponse_formulaire reponse_formulaire_erreur">(#ENV*{message_erreur})</p>]
+
+	[(#ENV{editable}|oui)
+	<form method="post" action="#ENV{action}" enctype="multipart/form-data"><div>
+		[(#REM) declarer les hidden qui declencheront le service du formulaire
+		parametre : url d'action ]
+		#ACTION_FORMULAIRE{#ENV{action}}
+
+		<div>
+			#SET{name,tromperie}
+			#SET{erreurs,#ENV**{erreurs}|table_valeur{#GET{name}}}
+			#SET{obli,'obligatoire'}
+
+
+			#SET{name,csv}
+			#SET{erreurs,#ENV**{erreurs}|table_valeur{#GET{name}}}
+			#SET{obli,'obligatoire'}
+			<div class="editer_[(#GET{name})][ (#GET{obli})][ (#GET{erreurs}|oui)erreur]">
+				<label for="#GET{name}"><:tuto:champ_csv_label:></label>
+				[<span class="erreur_message">(#GET{erreurs})</span>]
+				<input type="file" class="file" name="#GET{name}" id="#GET{name}" size="40" />
+			</div>
+		</div>
+
+		[(#REM) ajouter les saisies supplementaires : extra et autre, a cet endroit ]
+		<!--extra-->
+
+		<p class="boutons"><span class="image_loading"></span><input type="submit" class="submit" value="<:bouton_telecharger:>" /></p>
+	</div></form>
+	]
+</div>

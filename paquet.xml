@@ -41,6 +41,7 @@
 	-->
 
 	<necessite nom="saisies" compatibilite="[3.17.0;]" />
+	<necessite nom="cvtupload" compatibilite="[1.15.6;]" />
 
 
 	<pipeline nom="autoriser" inclure="tutoriel_autorisations.php" />

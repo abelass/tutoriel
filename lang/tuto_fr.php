@@ -13,6 +13,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// C
 	'champ_commentaires_label' => 'Commentaires',
+	'champ_csv_label' => 'Fichier csv :',
 	'champ_descriptif_label' => 'Descriptif',
 	'champ_resultat_label' => 'Objet/Résultat final',
 	'champ_titre_label' => 'Titre',
@@ -39,6 +40,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'texte_changer_statut_tuto' => 'Ce tutoriel est :',
 	'texte_creer_associer_tuto' => 'Créer et associer un tutoriel',
 	'texte_definir_comme_traduction_tuto' => 'Ce tutoriel est une traduction du tutoriel numéro :',
+	'titre_importer_tutos' => 'Importation de tutoriaux',
 	'titre_langue_tuto' => 'Langue de ce tutoriel',
 	'titre_logo_tuto' => 'Logo de ce tutoriel',
 	'titre_objets_lies_tuto' => 'Liés à ce tutoriel',
