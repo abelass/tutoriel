@@ -9,9 +9,19 @@
 	<span dir="#LANG_DIR" class="#EDIT{descriptif} descriptif">(#DESCRIPTIF)</span>
 </div>]
 
+[<div class="champ contenu_url[ (#URL*|strlen|?{'',vide})]">
+	<label><:tuto:champ_url_label:> : </label>
+	<span dir="#LANG_DIR" class="#EDIT{url} url">(#URL)</span>
+</div>]
+
 [<div class="champ contenu_resultat[ (#RESULTAT*|strlen|?{'',vide})]">
 	<label><:tuto:champ_resultat_label:> : </label>
 	<span dir="#LANG_DIR" class="#EDIT{resultat} resultat">(#RESULTAT)</span>
+</div>]
+
+[<div class="champ contenu_commentaires[ (#COMMENTAIRES*|strlen|?{'',vide})]">
+	<label><:tuto:champ_commentaires_label:> : </label>
+	<span dir="#LANG_DIR" class="#EDIT{commentaires} commentaires">(#COMMENTAIRES)</span>
 </div>]
 
 </BOUCLE_tuto>

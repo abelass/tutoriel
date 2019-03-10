@@ -2,7 +2,7 @@
 
 /**
  *  Fichier généré par la Fabrique de plugin v6
- *   le 2019-03-09 09:15:32
+ *   le 2019-03-10 08:29:15
  *
  *  Ce fichier de sauvegarde peut servir à recréer
  *  votre plugin avec le plugin «Fabrique» qui a servi à le créer.
@@ -132,7 +132,23 @@ $data = array (
           'explication' => '',
           'saisie_options' => '',
         ),
-        5 => 
+        2 => 
+        array (
+          'nom' => 'URL',
+          'champ' => 'url',
+          'sql' => 'varchar(255) NOT NULL DEFAULT \'\'',
+          'caracteristiques' => 
+          array (
+            0 => 'editable',
+            1 => 'versionne',
+            2 => 'obligatoire',
+          ),
+          'recherche' => '',
+          'saisie' => 'input',
+          'explication' => '',
+          'saisie_options' => '',
+        ),
+        3 => 
         array (
           'nom' => 'Objet/Résultat final',
           'champ' => 'resultat',
@@ -143,6 +159,21 @@ $data = array (
             1 => 'versionne',
           ),
           'recherche' => '8',
+          'saisie' => 'textarea',
+          'explication' => '',
+          'saisie_options' => 'conteneur_class=pleine_largeur, class=inserer_barre_edition, rows=4',
+        ),
+        4 => 
+        array (
+          'nom' => 'Commentaires',
+          'champ' => 'commentaires',
+          'sql' => 'text NOT NULL DEFAULT \'\'',
+          'caracteristiques' => 
+          array (
+            0 => 'editable',
+            1 => 'versionne',
+          ),
+          'recherche' => '4',
           'saisie' => 'textarea',
           'explication' => '',
           'saisie_options' => 'conteneur_class=pleine_largeur, class=inserer_barre_edition, rows=4',

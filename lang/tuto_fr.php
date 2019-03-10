@@ -12,9 +12,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'ajouter_lien_tuto' => 'Ajouter ce tutoriel',
 
 	// C
+	'champ_commentaires_label' => 'Commentaires',
 	'champ_descriptif_label' => 'Descriptif',
 	'champ_resultat_label' => 'Objet/Résultat final',
 	'champ_titre_label' => 'Titre',
+	'champ_url_label' => 'URL',
 	'confirmer_supprimer_tuto' => 'Confirmez-vous la suppression de cet tutoriel ?',
 
 	// I

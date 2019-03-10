@@ -97,7 +97,7 @@ function formulaires_editer_tuto_charger_dist($id_tuto = 'new', $id_rubrique = 0
 function formulaires_editer_tuto_verifier_dist($id_tuto = 'new', $id_rubrique = 0, $retour = '', $lier_trad = 0, $config_fonc = '', $row = array(), $hidden = '') {
 	$erreurs = array();
 
-	$erreurs = formulaires_editer_objet_verifier('tuto', $id_tuto, array('titre', 'descriptif'));
+	$erreurs = formulaires_editer_objet_verifier('tuto', $id_tuto, array('titre', 'descriptif', 'url'));
 
 	return $erreurs;
 }
