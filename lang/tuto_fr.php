@@ -28,6 +28,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_nb_tutos' => '@nb@ tutoriaux',
 	'info_tutos_auteur' => 'Les tutoriaux de cet auteur',
 
+	// M
+	'message_tutos_importe' => '@nombre@ tutos ont été importés!',
+
 	// R
 	'retirer_lien_tuto' => 'Retirer ce tutoriel',
 	'retirer_tous_liens_tutos' => 'Retirer tous les tutoriaux',
