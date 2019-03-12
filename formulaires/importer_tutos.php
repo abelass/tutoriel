@@ -68,6 +68,7 @@ function formulaires_importer_tutos_traiter(){
 		if (!empty($set['tutos'])) {
 			//Si la langue n'est pas fournit
 			if (!isset($set['tutos']['lang'])){
+
 				// On essaie de la générer via l'id_rubrique.
 				if (isset($set['tutos']['id_rubrique'])) {
 					$set['tutos']['lang'] = sql_getfestel(
@@ -75,7 +76,7 @@ function formulaires_importer_tutos_traiter(){
 						'spip_rubriques', 
 						'id_rubrique=' . $set['tutos']['id_rubrique']);
 				}
-				// Sinon vial l'id_parent
+				// Sinon via l'id_parent
 				elseif (isset($set['tutos']['id_parent'])) {
 					$set['tutos']['lang'] = sql_getfestel(
 						'lang'. 
@@ -88,7 +89,7 @@ function formulaires_importer_tutos_traiter(){
 				}
 			}
 
-			// Si l'id_pareent es manquante
+			// Si l'id_parent est manquant
 			if (!isset($set['tutos']['id_parent'])) {
 
 				if (!isset($set['tutos']['id_rubrique'])) {
@@ -109,7 +110,7 @@ function formulaires_importer_tutos_traiter(){
 			}
 
 			// On enregistre les tutos.
-			if ($tuto = $editer_objet('', 'tuto', $set['tutos'])) {
+			if ($tuto = $editer_objet('new', 'tuto', $set['tutos'])) {
 				// On attache les mots clés
 				objet_associer(['mot' => $set['mots']], ['tuto' => $tuto[0]]);
 				$enregistre++;
