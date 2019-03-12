@@ -47,6 +47,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_langue_tuto' => 'Langue de ce tutoriel',
 	'titre_logo_tuto' => 'Logo de ce tutoriel',
 	'titre_objets_lies_tuto' => 'Liés à ce tutoriel',
+	'titre_telecharger_template' => 'Télécharger le template',
 	'titre_tuto' => 'Tutoriel',
 	'titre_tutos' => 'Tutoriaux',
 	'titre_tutos_rubrique' => 'Tutoriaux de la rubrique',
