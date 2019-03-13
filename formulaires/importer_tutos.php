@@ -48,19 +48,23 @@ function formulaires_importer_tutos_traiter(){
 		$set = [];
 		// On sépare les champs tutos des critères
 		foreach($tuto AS $champ => $valeur) {
-			$champ = trim($champ);
-			if (in_array($champ, $criteres)) {
-				$dest = 'mots';
+			if (!empty($valeur)) {
+				$champ = trim($champ);
 				// On regarde si on trouve un mot clé correspondant au critère
-				if ($id_mot = sql_getfetsel(
-					'id_mot', 
-					'spip_mots', 
-					'titre LIKE ' . sql_quote('%' . $valeur . '%'))) {
-					$set['mots'][] = $id_mot;
+				if (in_array($champ, $criteres)) {
+					$valeurs = explode(',', $valeur);
+					foreach ($valeurs AS $titre) {
+						if ($id_mot = sql_getfetsel(
+							'id_mot',
+							'spip_mots',
+							'titre LIKE ' . sql_quote('%' . trim($titre) . '%'))) {
+							$set['mots'][] = $id_mot;
+						}
+					}
 				}
-			}
-			elseif (!empty($valeur)) {
-				$set['tutos'][$champ] = $valeur;
+				else {
+					$set['tutos'][$champ] = $valeur;
+				}
 			}
 		}
 
@@ -72,15 +76,15 @@ function formulaires_importer_tutos_traiter(){
 				// On essaie de la générer via l'id_rubrique.
 				if (isset($set['tutos']['id_rubrique'])) {
 					$set['tutos']['lang'] = sql_getfestel(
-						'lang'. 
-						'spip_rubriques', 
+						'lang'.
+						'spip_rubriques',
 						'id_rubrique=' . $set['tutos']['id_rubrique']);
 				}
 				// Sinon via l'id_parent
 				elseif (isset($set['tutos']['id_parent'])) {
 					$set['tutos']['lang'] = sql_getfestel(
-						'lang'. 
-						'spip_rubriques', 
+						'lang'.
+						'spip_rubriques',
 						'id_rubrique=' . $set['tutos']['id_parent']);
 				}
 				// Sinon c'est la langue par défaut
@@ -94,8 +98,8 @@ function formulaires_importer_tutos_traiter(){
 
 				if (!isset($set['tutos']['id_rubrique'])) {
 					if (!$id_rubrique = sql_getfetsel(
-						'id_rubrique', 
-						'spip_rubriques', 
+						'id_rubrique',
+						'spip_rubriques',
 						'id_parent=0 AND lang LIKE ' . sql_quote($set['tutos']['lang']))) {
 						$id_rubrique = sql_getfetsel('id_rubrique', 'spip_rubriques', 'lang LIKE ' . sql_quote($lang));
 					}
