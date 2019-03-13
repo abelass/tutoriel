@@ -1,27 +1,27 @@
 <BOUCLE_tuto(TUTOS){id_tuto}{statut?}>
 [<div class="champ contenu_titre[ (#TITRE*|strlen|?{'',vide})]">
-	<label><:tuto:champ_titre_label:> : </label>
+	<label><:ecrire:inf_titre:> : </label>
 	<span dir="#LANG_DIR" class="#EDIT{titre} titre">(#TITRE)</span>
 </div>]
 
 [<div class="champ contenu_descriptif[ (#DESCRIPTIF*|strlen|?{'',vide})]">
-	<label><:tuto:champ_descriptif_label:> : </label>
-	<span dir="#LANG_DIR" class="#EDIT{descriptif} descriptif">(#DESCRIPTIF)</span>
+	<label><:ecrire:info_descriptif:> </label>
+	<div dir="#LANG_DIR" class="#EDIT{descriptif} descriptif">(#DESCRIPTIF)</div>
 </div>]
 
 [<div class="champ contenu_url[ (#URL*|strlen|?{'',vide})]">
 	<label><:tuto:champ_url_label:> : </label>
-	<span dir="#LANG_DIR" class="#EDIT{url} url">(#URL)</span>
+	<span dir="#LANG_DIR" class="#EDIT{url} url"> (#URL)</span>
 </div>]
 
 [<div class="champ contenu_resultat[ (#RESULTAT*|strlen|?{'',vide})]">
 	<label><:tuto:champ_resultat_label:> : </label>
-	<span dir="#LANG_DIR" class="#EDIT{resultat} resultat">(#RESULTAT)</span>
+	<div dir="#LANG_DIR" class="#EDIT{resultat} resultat">(#RESULTAT)</div>
 </div>]
 
 [<div class="champ contenu_commentaires[ (#COMMENTAIRES*|strlen|?{'',vide})]">
 	<label><:tuto:champ_commentaires_label:> : </label>
-	<span dir="#LANG_DIR" class="#EDIT{commentaires} commentaires">(#COMMENTAIRES)</span>
+	<div dir="#LANG_DIR" class="#EDIT{commentaires} commentaires">(#COMMENTAIRES)</div>
 </div>]
 
 </BOUCLE_tuto>

@@ -14,9 +14,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// C
 	'champ_commentaires_label' => 'Commentaires',
 	'champ_csv_label' => 'Fichier csv :',
-	'champ_descriptif_label' => 'Descriptif',
 	'champ_resultat_label' => 'Objet/Résultat final',
-	'champ_titre_label' => 'Titre',
 	'champ_url_label' => 'URL',
 	'confirmer_supprimer_tuto' => 'Confirmez-vous la suppression de cet tutoriel ?',
 
@@ -29,6 +27,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'info_tutos_auteur' => 'Les tutoriaux de cet auteur',
 
 	// M
+	'message_erreur_fichier_manquant' => 'Sélectionnez d\'abord un fichier',
 	'message_tutos_importe' => '@nombre@ tutos ont été importés!',
 
 	// R

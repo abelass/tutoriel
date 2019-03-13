@@ -9,7 +9,7 @@
 		<div class="editer-groupe">
 
 			[(#SAISIE{input, titre, obligatoire=oui,
-				label=<:tuto:champ_titre_label:>})]
+				label=<:ecrire:info_titre:>})]
 
 			[<div class="editer editer_rubrique[ (#ENV**{erreurs/id_parent}|oui)erreur]">
 					<label for="id_parent"><:titre_cadre_interieur_rubrique:></label>[
@@ -21,7 +21,7 @@
 
 
 			[(#SAISIE{textarea, descriptif, obligatoire=oui,
-				label=<:tuto:champ_descriptif_label:>})]
+				label=<:ecrire:info_descriptif:>})]
 
 			[(#SAISIE{input, url, obligatoire=oui,
 				label=<:tuto:champ_url_label:>})]

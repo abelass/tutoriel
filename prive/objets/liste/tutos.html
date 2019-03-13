@@ -11,9 +11,9 @@
 	<thead>
 		<tr class="first_row">
 			<th class="picto" scope="col"></th>
-			<th class="statut" scope="col">[(#TRI{statut,<span title="<:lien_trier_statut|attribut_html:>">#</span>,ajax})]</th> 
-			<th class="titre" scope="col">[(#TRI{titre,<:tuto:champ_titre_label:>,ajax})]</th>
-			<th class="date" scope="col">[(#TRI{date,<:date:>,ajax})]</th> 
+			<th class="statut" scope="col">[(#TRI{statut,<span title="<:lien_trier_statut|attribut_html:>">#</span>,ajax})]</th>
+			<th class="titre" scope="col">[(#TRI{titre,<:ecrire:info_titre:>,ajax})]</th>
+			<th class="date" scope="col">[(#TRI{date,<:date:>,ajax})]</th>
 			<th class="id" scope="col">[(#TRI{id_tuto,<:info_numero_abbreviation:>,ajax})]</th>
 		</tr>
 	</thead>
@@ -21,9 +21,9 @@
 	<BOUCLE_liste_tutos(TUTOS){id_rubrique?}{id_secteur?}{id_mot?}{id_auteur?}{where?}{statut?}{recherche?}{tri #ENV{par,num titre},#GET{defaut_tri}}{par titre}{pagination #ENV{nb,10}}>
 		<tr class="[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})]">
 			<td class="picto">[(#CHEMIN_IMAGE{tuto-16.png}|balise_img)]</td>
-			<td class="statut">[(#STATUT|puce_statut{tuto,#ID_TUTO,#ID_RUBRIQUE})]</td> 
+			<td class="statut">[(#STATUT|puce_statut{tuto,#ID_TUTO,#ID_RUBRIQUE})]</td>
 			<td class="titre principale">[(#LOGO_TUTO|image_reduire{20,26})]<a href="[(#ID_TUTO|generer_url_entite{tuto})]" title="<:info_numero_abbreviation|attribut_html:> #ID_TUTO">[(#RANG). ]#TITRE</a></td>
-			<td class="date secondaire">[(#DATE|affdate_jourcourt)]</td> 
+			<td class="date secondaire">[(#DATE|affdate_jourcourt)]</td>
 			<td class="id">[(#AUTORISER{modifier,tuto,#ID_TUTO}|?{
 				<a href="[(#URL_ECRIRE{tuto_edit,id_tuto=#ID_TUTO})]">#ID_TUTO</a>,
 				#ID_TUTO

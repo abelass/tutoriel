@@ -126,6 +126,8 @@ function formulaires_importer_tutos_traiter(){
 		}
 		unlink($fichiers['csv']['tmp_name']);
 
-		return ['message_ok' => _T('tuto:message_tutos_importe', ['nombre' => $enregistre])];
+		$retour = ['message_ok' => _T('tuto:message_tutos_importe', ['nombre' => $enregistre])];
 	}
+
+	return $retour;
 }
