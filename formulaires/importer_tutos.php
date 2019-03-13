@@ -26,6 +26,9 @@ function formulaires_importer_tutos_fichiers(){
 
 function formulaires_importer_tutos_verifier(){
 	$erreurs = [];
+	if ($_FILES['csv']['error'] != 0) {
+		$erreurs['csv'] = _T('tuto:message_erreur_fichier_manquant');
+	}
 
 	return $erreurs;
 }
