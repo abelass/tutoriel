@@ -22,7 +22,15 @@
 		<tr class="[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})]">
 			<td class="picto">[(#CHEMIN_IMAGE{tuto-16.png}|balise_img)]</td>
 			<td class="statut">[(#STATUT|puce_statut{tuto,#ID_TUTO,#ID_RUBRIQUE})]</td>
-			<td class="titre principale">[(#LOGO_TUTO|image_reduire{20,26})]<a href="[(#ID_TUTO|generer_url_entite{tuto})]" title="<:info_numero_abbreviation|attribut_html:> #ID_TUTO">[(#RANG). ]#TITRE</a></td>
+			<td class="titre principale">
+				[(#LOGO_TUTO|image_reduire{20,26})]
+				<a
+					href="[(#ID_TUTO|generer_url_entite{tuto})]"
+					title="<:info_numero_abbreviation|attribut_html:> #ID_TUTO"
+					[hreflang="(#ENV{lang}|=={#LANG}|non|?{#LANG})"]>
+					[(#RANG). ]#TITRE
+				</a>
+			</td>
 			<td class="date secondaire">[(#DATE|affdate_jourcourt)]</td>
 			<td class="id">[(#AUTORISER{modifier,tuto,#ID_TUTO}|?{
 				<a href="[(#URL_ECRIRE{tuto_edit,id_tuto=#ID_TUTO})]">#ID_TUTO</a>,
