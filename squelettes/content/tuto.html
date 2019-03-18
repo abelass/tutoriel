@@ -1,0 +1,40 @@
+<BOUCLE_content(TUTOS){id_tuto}{tout}>
+<section>
+
+	<header class="cartouche">
+		[(#LOGO_TUTO|image_reduire{200,200})]
+		<h1 class="#EDIT{titre}">#TITRE</h1>
+	</header>
+
+	<div class="main">
+		[<div class="#EDIT{descriptif} chapo">
+			(#DESCRIPTIF)
+		</div>]
+
+
+[<div class="champ contenu_resultat[ (#RESULTAT*|strlen|?{'',vide})]">
+	<label><:tuto:champ_resultat_label:> : </label>
+	<div dir="#LANG_DIR" class="#EDIT{resultat} resultat">(#RESULTAT)</div>
+</div>]
+
+[<div class="champ contenu_commentaires[ (#COMMENTAIRES*|strlen|?{'',vide})]">
+	<label><:tuto:champ_commentaires_label:> : </label>
+	<div dir="#LANG_DIR" class="#EDIT{commentaires} commentaires">(#COMMENTAIRES)</div>
+</div>]
+
+	</div>
+
+
+	<aside>
+[<div class="champ contenu_url[ (#URL*|strlen|?{'',vide})]">
+	<label><:tuto:champ_url_label:> : </label>
+	<span dir="#LANG_DIR" class="#EDIT{url} url"> (#URL)</span>
+</div>]
+	</aside>
+
+	<footer>
+		[<div class="notes"><h2><:info_notes:></h2>(#NOTES)</div>]
+	</footer>
+
+</section>
+</BOUCLE_content>
