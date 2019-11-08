@@ -8,9 +8,10 @@ function tuto_champ_editables() {
 	return implode(',',$champs);
 }
 
-function tuto_criteres() {
+function tuto_criteres($lang) {
 	$fonction = charger_fonction('criteres_utilises', 'inc/tutoriel');
-	$criteres = $fonction();
+	$criteres = $fonction(_request('lang'));
+
 	$criteres = array_column($criteres, 'nom', 'id_groupe');
 	return implode(',',$criteres);
 }
