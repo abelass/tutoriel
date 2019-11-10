@@ -80,8 +80,6 @@ function tutoriel_affiche_milieu($flux) {
 		));
 	}
 
-
-
 	if ($texte) {
 		if ($p = strpos($flux['data'], '<!--affiche_milieu-->')) {
 			$flux['data'] = substr_replace($flux['data'], $texte, $p, 0);
@@ -92,7 +90,6 @@ function tutoriel_affiche_milieu($flux) {
 
 	return $flux;
 }
-
 
 /**
  * Ajout de liste sur la vue d'un auteur
@@ -131,7 +128,6 @@ function tutoriel_boite_infos($flux) {
 	return $flux;
 }
 
-
 /**
  * Compter les enfants d'un objet
  *
@@ -151,7 +147,6 @@ function tutoriel_objet_compte_enfants($flux) {
 
 	return $flux;
 }
-
 
 /**
  * Optimiser la base de données
