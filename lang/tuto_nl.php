@@ -12,7 +12,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'ajouter_lien_tuto' => 'Voeg deze tutorial toe',
 
 	// C
-	'champ_commentaires_label' => 'Opmerkingen',
+	'champ_commentaires_label' => 'Opmerkingen:',
 	'champ_csv_label' => 'Csv file:',
 	'champ_url_label' => 'URL',
 	'confirmer_supprimer_tuto' => 'Bevestig je het verwijderen van deze tutorial?',
