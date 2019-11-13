@@ -14,7 +14,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// C
 	'champ_commentaires_label' => 'Comments:',
 	'champ_csv_label' => 'Csv file:',
-	'champ_url_label' => 'URL',
+	'champ_url_label' => 'Link:',
 	'confirmer_supprimer_tuto' => 'Do you confirm the removal of this tutorial?',
 
 	// I
