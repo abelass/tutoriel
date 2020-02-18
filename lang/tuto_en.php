@@ -48,5 +48,5 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'titre_telecharger_template' => 'Download the template',
 	'titre_tuto' => 'Tutorial',
 	'titre_tutos' => 'Tutorials',
-	'titre_tutos_rubrique' => 'Tutorials van de rubriek',
+	'titre_tutos_rubrique' => 'Tutorials of this section',
 );

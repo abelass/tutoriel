@@ -33,12 +33,12 @@ function tutoriel_affiche_enfants($flux) {
 		$id_objet = $flux['args']['id_objet'];
 
 		if ($e['type'] == 'rubrique') {
-
 			$flux['data'] .= recuperer_fond(
 				'prive/objets/liste/tutos',
 				array(
 					'titre' => _T('tuto:titre_tutos_rubrique'),
-					'id_rubrique' => $id_objet
+					'id_rubrique' => $id_objet,
+					'lang' => 'fr',
 				)
 			);
 
