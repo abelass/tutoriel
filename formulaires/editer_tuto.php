@@ -3,7 +3,7 @@
  * Gestion du formulaire de d'édition de tuto
  *
  * @plugin     Tutoriaux
- * @copyright  2019
+ * @copyright  2019 - 2020
  * @author     Rainer Müller
  * @licence    GNU/GPL v3
  * @package    SPIP\Tutoriel\Formulaires

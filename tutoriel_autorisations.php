@@ -3,7 +3,7 @@
  * Définit les autorisations du plugin Tutoriaux
  *
  * @plugin     Tutoriaux
- * @copyright  2019
+ * @copyright  2019 - 2020
  * @author     Rainer Müller
  * @licence    GNU/GPL v3
  * @package    SPIP\Tutoriel\Autorisations
@@ -25,18 +25,6 @@ if (!defined('_ECRIRE_INC_VERSION')) {
 function tutoriel_autoriser() {
 }
 
-
-/* Exemple
-function autoriser_tutoriel_configurer_dist($faire, $type, $id, $qui, $opt) {
-	// type est un objet (la plupart du temps) ou une chose.
-	// autoriser('configurer', '_tutoriel') => $type = 'tutoriel'
-	// au choix :
-	return autoriser('webmestre', $type, $id, $qui, $opt); // seulement les webmestres
-	return autoriser('configurer', '', $id, $qui, $opt); // seulement les administrateurs complets
-	return $qui['statut'] == '0minirezo'; // seulement les administrateurs (même les restreints)
-	// ...
-}
-*/
 
 // -----------------
 // Objet tutos
