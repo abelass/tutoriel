@@ -1,7 +1,7 @@
 <paquet
 	prefix="tutoriel"
 	categorie="divers"
-	version="1.0.5"
+	version="1.1.0"
 	etat="dev"
 	compatibilite="[3.0.0;3.3.*]"
 	logo="prive/themes/spip/images/tutoriel-64.png"
@@ -10,18 +10,15 @@
 >
 
 	<nom>Tutoriaux</nom>
-	<!-- Gérez vos tutoriaux -->
+	<!-- GÃ©rez vos tutoriaux -->
 
 	<!-- cette balise peut être présente plusieurs fois s'il y a plusieurs auteurs -->
 	<auteur lien='https://web-simple.eu'>Rainer Müller</auteur>
 
 	<licence>GNU/GPL v3</licence>
 
-
-
 	<necessite nom="saisies" compatibilite="[3.17.0;]" />
 	<necessite nom="cvtupload" compatibilite="[1.15.6;]" />
-
 
 	<pipeline nom="autoriser" inclure="tutoriel_autorisations.php" />
 
