@@ -3,7 +3,7 @@
  * Utilisation de l'action supprimer pour l'objet tuto
  *
  * @plugin     Tutoriaux
- * @copyright  2019 - 2020
+ * @copyright  2019 - 2021
  * @author     Rainer Müller
  * @licence    GNU/GPL v3
  * @package    SPIP\Tutoriel\Action
