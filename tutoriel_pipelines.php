@@ -72,7 +72,7 @@ function tutoriel_affiche_milieu($flux) {
 	$e = trouver_objet_exec($flux['args']['exec']);
 
 	// auteurs sur les tutos
-	if (!$e['edition'] and in_array($e['type'], array('tuto'))) {
+	if ($e && !$e['edition'] and in_array($e['type'], array('tuto'))) {
 		$texte .= recuperer_fond('prive/objets/editer/liens', array(
 			'table_source' => 'auteurs',
 			'objet' => $e['type'],

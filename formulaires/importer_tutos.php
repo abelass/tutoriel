@@ -16,7 +16,7 @@ function formulaires_importer_tutos_charger(){
 	$criteres = $fonction();
 	$criteres = array_keys(array_column($criteres, 'nom', 'id_groupe'));
 
-	$valeurs['_hidden'] .= '<input name="criteres" type="hidden" value="' . implode(',', $criteres) . '"/>';
+	$valeurs['_hidden'] = '<input name="criteres" type="hidden" value="' . implode(',', $criteres) . '"/>';
 
 	return $valeurs;
 }
